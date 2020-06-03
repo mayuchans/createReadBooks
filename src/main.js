@@ -6,6 +6,10 @@ import './plugins/element.js'
 
 Vue.config.productionTip = false
 
+// ＄http経由でfetchメゾットを呼び出せるようにしている
+Vue.prototype.$http = (url,opts)=> fetch(url,opts)
+
+
 new Vue({
   router,
   store,
