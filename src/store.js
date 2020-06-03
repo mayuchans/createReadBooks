@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import cteatePersistedState from 'cteatePersistedState'
-import {OPDATE_BOOK,UPDATE_CURRENT} from './mutation-type'
+import cteatePersistedState from 'vuex-persistedstate'
+import {OPDATE_BOOK,UPDATE_CURRENT} from './mutation-types'
 
 Vue.use(Vuex)
 
