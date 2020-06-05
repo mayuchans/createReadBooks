@@ -1,10 +1,10 @@
 <template>
-  <div id="crearfix" :class="{linkable}" @click="onclick">
+  <div class="clearfix" :class="{linkable}" @click="onclick">
     <div class="image"><img :src="book.image"/></div>
     <div class="details">
       <ul>
         <li v-if="index">{{index}}</li>
-        <li>{{book.title}} ({{book.price}})円</li>
+        <li>{{book.title}} ( {{book.price}}円 )</li>
         <li>{{book.author}}著</li>
         <li>{{book.publisher}}/刊</li>
         <li>{{book.published}}/発売</li>
@@ -41,7 +41,7 @@ export default {
 <style scoped>
 .linkable:hover{
   cursor: pointer;
-  background-color: #FF9;
+  background-color: #ff9;
 }
 
 .image {
