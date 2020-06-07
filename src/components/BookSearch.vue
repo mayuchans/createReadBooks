@@ -1,5 +1,5 @@
 <template>
-  <div id="serch">
+  <div id="search">
     <el-form :inline="true">
       <el-form-item label="キーワード">
         <el-input type="text"  size="large" v-model="keyword"></el-input>
@@ -20,13 +20,13 @@
 import BookInfo from '@/components/BookInfo.vue'
 
 export default {
-  name: "book-serch",
+  name: 'book-search"',
   components:{
     BookInfo
   },
   data(){
     return{
-      keyword:'vue.js',
+      keyword:'',
       books:[]
     }
   },
@@ -63,8 +63,8 @@ export default {
 
 
 <style  scoped>
-#Serch form{
-  margin-top: '15px';
+#Search form{
+  margin-top: 15px;
 }
 
 </style>

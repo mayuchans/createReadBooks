@@ -4,7 +4,7 @@
     <div class="details">
       <ul>
         <li v-if="index">{{index}}</li>
-        <li>{{book.title}} ( {{book.price}}円 )</li>
+        <li>{{book.title}} ({{book.price}}円)</li>
         <li>{{book.author}}著</li>
         <li>{{book.publisher}}/刊</li>
         <li>{{book.published}}/発売</li>

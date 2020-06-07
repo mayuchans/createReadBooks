@@ -7,7 +7,7 @@
   <!-- ページャーの作成 -->
   <div>
     <el-pagination background layout="prev, pager, next"
-     :total="bookCount" page-size="3" @current-change ="onchange">
+     :total="bookCount" :page-size="3" @current-change="onchange">
     </el-pagination>
   </div>
   </div>
@@ -41,7 +41,7 @@ export default {
   // 初期化した時に1ページ目の情報を取得
   mounted() {
     this.books = this.getRangeByPage(1)
-  },
+  }
 }
 </script>
 

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import cteatePersistedState from 'vuex-persistedstate'
+import createPersistedState from 'vuex-persistedstate'
 import {UPDATE_BOOK,UPDATE_CURRENT} from './mutation-types'
 
 Vue.use(Vuex)
@@ -33,7 +33,7 @@ export default new Vuex.Store({
     // 指定されたIDのページ情報
     getBookById(state){
       return id =>{
-        return state.books.find(books => books.id === id)
+        return state.books.find(book => book.id === id)
       }
     },
     // 現在編集中の書籍
@@ -67,7 +67,7 @@ export default new Vuex.Store({
       commit(UPDATE_BOOK,payload)
     }
   },
-  plugins:[cteatePersistedState({
+  plugins:[createPersistedState({
     key:'reading-recorder',
     storage: localStorage
   })]
