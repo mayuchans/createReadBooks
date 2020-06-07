@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import cteatePersistedState from 'vuex-persistedstate'
-import {OPDATE_BOOK,UPDATE_CURRENT} from './mutation-types'
+import {UPDATE_BOOK,UPDATE_CURRENT} from './mutation-types'
 
 Vue.use(Vuex)
 
@@ -48,7 +48,7 @@ export default new Vuex.Store({
       state.current = payload
     },
     // レビューを更新
-    [OPDATE_BOOK](state,payload){
+    [UPDATE_BOOK](state,payload){
       // gettersのgetBookByIdの中の新規id(payload.id)をｂとして
       let b = this.getters.getBookById(payload.id)
       if (b) {
@@ -63,8 +63,8 @@ export default new Vuex.Store({
     [UPDATE_CURRENT]({commit},payload){
       commit(UPDATE_CURRENT,payload)
     },
-    [OPDATE_BOOK]({commit},payload){
-      commit(OPDATE_BOOK,payload)
+    [UPDATE_BOOK]({commit},payload){
+      commit(UPDATE_BOOK,payload)
     }
   },
   plugins:[cteatePersistedState({
